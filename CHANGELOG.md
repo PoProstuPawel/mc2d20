@@ -6,7 +6,8 @@ If you want to check what truths and injuries that actor previously had you can 
 
 Here is a SCRIPT macro (select the actor's token on the stage and click the macro):
 
-```let act = canvas.tokens.controlled[0]?.actor
+```
+let act = canvas.tokens.controlled[0]?.actor
 if(act == undefined){
 console.log('select a token first')
 return;
@@ -14,7 +15,8 @@ return;
 console.log("TRUTHS")
 console.log(act.data.data.truths)
 console.log("INJURIES")
-console.log(act.data.data.injuries.list)```
+console.log(act.data.data.injuries.list)
+```
 
 
 # v 1.0.4
