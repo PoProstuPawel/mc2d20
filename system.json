@@ -33,7 +33,7 @@
     "gridDistance": 1,
     "gridUnits": "m",
     "url": "https://github.com/PoProstuPawel/mc2d20",    
-    "manifest": "https://github.com/PoProstuPawel/mc2d20/blob/main/system.json",    
+    "manifest": "https://raw.githubusercontent.com/PoProstuPawel/mc2d20/main/system.json",    
     "download": "https://github.com/PoProstuPawel/mc2d20/archive/refs/heads/main.zip"
   }
   
