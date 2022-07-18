@@ -1,8 +1,8 @@
 {
-    "name": "ac2d20",
-    "title": "Achtung Cthulhu 2d20",
-    "description": "The unofficial !Achtung Cthulhu 2d20 System for FoundryVTT",
-    "version": "1.0.5",
+    "name": "mc2d20",
+    "title": "Mutant Chronicles 2d20",
+    "description": "The unofficial !Achtung Cthulhu 2d20 conversion to Mutant Chronicles System for FoundryVTT",
+    "version": "0.03",
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
     "templateVersion": 1,
@@ -34,6 +34,6 @@
     "gridUnits": "m",
     "url": "https://github.com/PoProstuPawel/mc2d20",    
     "manifest": "https://github.com/PoProstuPawel/mc2d20/blob/main/system.json",    
-    "download": "https://github.com/superseva/ac2d20/releases/download/v1.0.5/ac2d20.zip"
+   
   }
   
