@@ -2,83 +2,166 @@ export const AC2D20 = {};
 
 AC2D20.attributes = {
   "agi": "AC2D20.AbilityAgi",
-  "bra": "AC2D20.AbilityBra",
+  "awa": "AC2D20.AbilityAwa",
   "coo": "AC2D20.AbilityCoo",
-  "ins": "AC2D20.AbilityIns",
-  "rea": "AC2D20.AbilityRea",
-  "wil": "AC2D20.AbilityWil",
+  "int": "AC2D20.AbilityInt",
+  "men": "AC2D20.AbilityMen",
+  "per": "AC2D20.AbilityPer",
+  "phy": "AC2D20.AbilityPhy",
+  "str": "AC2D20.AbilityStr"  
 };
 
 AC2D20.abilityAbbreviations = {
   "agi": "AC2D20.AbilityAgiAbr",
-  "bra": "AC2D20.AbilityBraAbr",
+  "awa": "AC2D20.AbilityAwaAbr",
   "coo": "AC2D20.AbilityCooAbr",
-  "ins": "AC2D20.AbilityInsAbr",
-  "rea": "AC2D20.AbilityReaAbr",
-  "wil": "AC2D20.AbilityWilAbr",
+  "int": "AC2D20.AbilityIntAbr",
+  "men": "AC2D20.AbilityMenAbr",
+  "per": "AC2D20.AbilityPerAbr",
+  "phy": "AC2D20.AbilityPhyAbr",
+  "str": "AC2D20.AbilityStrAbr",
 };
 
 AC2D20.SKILLS = [
   {
-    'label': 'ACADEMIA',
-    'key': "Academia",
-    'focuses': ['Art', 'Cryptography', 'Finance', 'History', 'Linguistics', 'Occultism', 'Science']
+    'label': 'ACROBATICS',
+    'key': "Acrobatics",
+    'focuses': ['Acrobatics']
   },
   {
-    'label': 'ATHLETICS',
-    'key': "Athletics",
-    'focuses': ['Climbing', 'Lifting', 'Physical Training', 'Running', 'Swimming', 'Throwing']
+    'label': 'CLOSE COMBAT',
+    'key': "Close Combat",
+    'focuses': ['Close Combat']
   },
   {
-    'label': 'ENGINEERING',
-    'key': "Engineering",
-    'focuses': ['Architecture', 'Combat Engineering', 'Electronics', 'Explosives', 'Mechanical Engineering']
-  },
-  {
-    'label': 'FIGHTING',
-    'key': "Fighting",
-    'focuses': ['Close Quarters', 'Handguns', 'Hand-to-Hand', 'Heavy Weapons', 'Melee Weapons', 'Rifles',
-      'Threat Awareness', 'Exotic']
-  },
-  {
-    'label': 'MEDICINE',
-    'key': "Medicine",
-    'focuses': ['First Aid', 'Infectious Diseases', 'Pharmacology', 'Psychiatry', 'Surgery', 'Toxicology']
+    'label': 'UNARMED COMBAT',
+    'key': "Unarmed Combat",
+    'focuses': ['Unarmed Combat']
   },
   {
     'label': 'OBSERVATION',
     'key': "Observation",
-    'focuses': ['Hearing', 'Instincts', 'Sight', 'Smell and Taste']
+    'focuses': ['Observation']
   },
   {
-    'label': 'PERSUASION',
-    'key': "Persuasion",
-    'focuses': ['Charm', 'Innuendo', 'Intimidation', 'Negotiation', 'Rhetoric', 'Deceive', 'Invocation']
+    'label': 'INSIGHT',
+    'key': "Insight",
+    'focuses': ['Insight']
   },
   {
-    'label': 'RESILIENCE',
-    'key': "Resilience",
-    'focuses': ['Fortitude', 'Discipline', 'Immunity']
+    'label': 'THIEVERY',
+    'key': "Thievery",
+    'focuses': ['Thievery']
   },
   {
-    'label': 'STEALTH',
-    'key': "Stealth",
-    'focuses': ['Camouflage', 'Disguise', 'Rural Stealth', 'Urban Stealth']
+    'label': 'RANGED WEAPONS',
+    'key': "Ranged Weapons",
+    'focuses': ['Ranged Weapons']
+  },
+  {
+    'label': 'GUNNERY',
+    'key': "Gunnery",
+    'focuses': ['Gunnery']
+  },
+  {
+    'label': 'PILOT',
+    'key': "Pilot",
+    'focuses': ['Pilot']
+  },
+  {
+    'label': 'SPACE',
+    'key': "Space",
+    'focuses': ['Space']
+  },
+  {
+    'label': 'EDUCATION',
+    'key': "Education",
+    'focuses': ['Education']
+  },
+  {
+    'label': 'LINGUISTICS',
+    'key': "Linguistics",
+    'focuses': ['Linguistics']
+  },
+  {
+    'label': 'SCIENCE',
+    'key': "Science",
+    'focuses': ['Science']
+  },
+  {
+    'label': 'MECHANICS',
+    'key': "Mechanics",
+    'focuses': ['Mechanics']
   },
   {
     'label': 'SURVIVAL',
     'key': "Survival",
-    'focuses': ['Animal Handling', 'Foraging', 'Hunting', 'Mysticism', 'Orienteering', 'Tracking']
+    'focuses': ['Survival']
   },
   {
-    'label': 'TACTICS',
-    'key': "Tactics",
-    'focuses': ['Air Force', 'Army', 'Covert Operations', 'Leadership', 'Navy', 'Technical Projects']
+    'label': 'VACUUM',
+    'key': "Vacuum",
+    'focuses': ['Vacuum']
   },
   {
-    'label': 'VEHICLES',
-    'key': "Vehicles",
-    'focuses': ['Cars', 'Motorcycles', 'Heavy Vehicles', 'Tanks', 'Aircraft', 'Watercraft']
+    'label': 'TREATMENT',
+    'key': "Treatment",
+    'focuses': ['Treatment']
+  },
+  {
+    'label': 'THIEVERY',
+    'key': "Thievery",
+    'focuses': ['Thievery']
+  },
+  {
+    'label': 'MEDICINE',
+    'key': "Medicine",
+    'focuses': ['Medicine']
+  },
+  {
+    'label': 'PSYCHOTHERAPY',
+    'key': "Psychotherapy",
+    'focuses': ['Psychotherapy']
+  },
+  {
+    'label': 'WILLPOWER',
+    'key': "Willpower",
+    'focuses': ['Willpower']
+  },
+  {
+    'label': 'MYSTICISM',
+    'key': "Mysticism",
+    'focuses': ['Mysticism']
+  },
+  {
+    'label': 'ANIMAL HANDLING',
+    'key': "Animal Handling",
+    'focuses': ['Animal Handling']
+  },
+  {
+    'label': 'LIFESTYLE',
+    'key': "Lifestyle",
+    'focuses': ['Lifestyle']
+  },
+  {
+    'label': 'PERSUADE',
+    'key': "Persuade",
+    'focuses': ['Persuade']
+  },
+  {
+    'label': 'COMMAND',
+    'key': "Command",
+    'focuses': ['Command']
+  },
+  {
+    'label': 'RESISTANCE',
+    'key': "Resistance",
+    'focuses': ['Resistance']
+  },
+  {
+    'label': 'ATHLETICS',
+    'key': "Athletics",
+    'focuses': ['Athletics']
   }
 ];
 
