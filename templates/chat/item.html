@@ -1,4 +1,4 @@
-<div class="ac2d20 chat-item">
+<div class="mc2d20 chat-item">
     {{#if img}}
     <div style="text-align: center;">
         <img class="item-img" src="{{img}}" title="{{name}}" />
@@ -12,45 +12,45 @@
     {{#if isPhysical}}
     <hr>
     <div class="flexrow" style="font-size: 0.75rem;">
-        <p><strong>{{localize "AC2D20.TEMPLATES.Size"}}:</strong> {{localize (concat 'AC2D20.TEMPLATES.SizeLevels.' (getSizeLabel data.weight))}}</p>
-        <p><strong>{{localize "AC2D20.TEMPLATES.Restriction"}}:</strong> {{data.restriction}}</p>
+        <p><strong>{{localize "MC2D20.TEMPLATES.Size"}}:</strong> {{localize (concat 'MC2D20.TEMPLATES.SizeLevels.' (getSizeLabel data.weight))}}</p>
+        <p><strong>{{localize "MC2D20.TEMPLATES.Restriction"}}:</strong> {{data.restriction}}</p>
     </div>
     {{/if}}
     <hr>
     {{#if isWeapon}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.Weapon_Type"}}:</strong> {{localize (concat 'AC2D20.WEAPONS.weaponTypes.' data.weaponType)}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Focus"}}:</strong> {{data.skill}} ({{data.focus}})</p>
-    <p><strong>{{localize "AC2D20.STRESS.stress"}}:</strong> {{data.stress}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}:</strong> {{localize (concat 'AC2D20.RANGE.' data.range)}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}:</strong> {{data.salvo}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{getWeaponQualities data}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Effects"}}:</strong> {{getWeaponEffects data}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Weapon_Type"}}:</strong> {{localize (concat 'MC2D20.WEAPONS.weaponTypes.' data.weaponType)}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Focus"}}:</strong> {{data.skill}} ({{data.focus}})</p>
+    <p><strong>{{localize "MC2D20.STRESS.stress"}}:</strong> {{data.stress}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.RANGE"}}:</strong> {{localize (concat 'MC2D20.RANGE.' data.range)}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Salvo"}}:</strong> {{data.salvo}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Qualities"}}:</strong> {{getWeaponQualities data}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Effects"}}:</strong> {{getWeaponEffects data}}</p>
     {{/if}}
 
     {{#if isSkillkit}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.Resources"}}:</strong> {{data.resources}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong> {{data.skill}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Resources"}}:</strong> {{data.resources}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Skill"}}:</strong> {{data.skill}}</p>
     {{/if}}
 
     {{#if isEquipment}}
-    <p><strong>{{localize "AC2D20.UI.Quantity"}}:</strong> {{data.quantity}}</p>
+    <p><strong>{{localize "MC2D20.UI.Quantity"}}:</strong> {{data.quantity}}</p>
     {{/if}}
 
     {{#if isArmor}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.Resistance"}}:</strong> {{data.resistance}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{getWeaponQualities data}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Resistance"}}:</strong> {{data.resistance}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Qualities"}}:</strong> {{getWeaponQualities data}}</p>
     {{/if}}
 
     {{#if isTalent}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.Keywords"}}:</strong> {{data.keywords}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Keywords"}}:</strong> {{data.keywords}}</p>
     {{/if}}
 
     {{#if isSpell}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.SpellType"}}:</strong> {{localize (concat 'AC2D20.SPELL.SpellTypes.' data.spellType)}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong> {{data.skill}} ({{data.focus}})</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Difficulty"}}:</strong> {{data.difficulty}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Cost"}}:</strong> {{data.cost}} ({{data.costEffects}})</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Duration"}}:</strong> {{data.duration}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.SpellType"}}:</strong> {{localize (concat 'MC2D20.SPELL.SpellTypes.' data.spellType)}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Skill"}}:</strong> {{data.skill}} ({{data.focus}})</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Difficulty"}}:</strong> {{data.difficulty}}</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Cost"}}:</strong> {{data.cost}} ({{data.costEffects}})</p>
+    <p><strong>{{localize "MC2D20.TEMPLATES.Duration"}}:</strong> {{data.duration}}</p>
     {{/if}}
 
     <hr>
