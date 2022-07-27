@@ -12,11 +12,11 @@
         {{#if data.weight includeZero=true}}
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
             <div class="resource">
-                <label class="resource-label">{{localize "AC2D20.UI.Quantity"}}</label>
+                <label class="resource-label">{{localize "MC2D20.UI.Quantity"}}</label>
                 <input class="num-short-2" type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" />
             </div>
             <div class="resource">
-                <label class="resource-label">{{localize "AC2D20.TEMPLATES.Size"}}</label>
+                <label class="resource-label">{{localize "MC2D20.TEMPLATES.Size"}}</label>
                 <select name="data.weight">
                     {{#select data.weight}}
                     <option value="0" data-dtype="Number">Trivial</option>
@@ -26,7 +26,7 @@
                 </select>
             </div>
             <div class="resource">
-                <label class="resource-label">{{localize "AC2D20.TEMPLATES.Restriction"}}</label>
+                <label class="resource-label">{{localize "MC2D20.TEMPLATES.Restriction"}}</label>
                 <input class="num-short-2" type="number" name="data.restriction" value="{{data.restriction}}" data-dtype="Number" />
             </div>
         </div>
