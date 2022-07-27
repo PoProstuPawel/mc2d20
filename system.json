@@ -6,22 +6,22 @@
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
     "templateVersion": 1,
-    "author": "HappySteve",
+    "author": "PoProstuPaweł",
     "scripts": [],
-    "esmodules": ["module/ac2d20.mjs"],
-    "styles": ["css/ac2d20.css"],
+    "esmodules": ["module/mc2d20.mjs"],
+    "styles": ["css/mc2d20.css"],
     "packs": [{
 			"name": "skills",
 			"label": "Skills",
-			"system": "ac2d20",
+			"system": "mc2d20",
 			"path": "./packs/skills.db",
 			"entity": "Item"
 		},
     {
-      "name": "ac-2d20-macros",
-      "label": "AC 2d20 Macros",
-      "system": "ac2d20",
-      "path": "./packs/ac-2d20-macros.db",
+      "name": "mc-2d20-macros",
+      "label": "MC 2d20 Macros",
+      "system": "mc2d20",
+      "path": "./packs/mc-2d20-macros.db",
       "entity": "Macro"
     }],
     "languages": [{
