@@ -2,14 +2,14 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <img src="systems/ac2d20/assets/main-menu-slope.webp">
+    <img src="systems/mc2d20/assets/main-menu-slope.webp">
     <div class="buttons">
-      <a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
-      <a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
+      <a class="item" data-tab="attributes">{{localize "MC2D20.TEMPLATES.Attributes"}}</a>
+      <a class="item" data-tab="description">{{localize "MC2D20.TEMPLATES.Description"}}</a>
     </div>
   </nav>
 
-  {{> "systems/ac2d20/templates/item/parts/item-header.html"}}
+  {{> "systems/mc2d20/templates/item/parts/item-header.html"}}
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
@@ -23,7 +23,7 @@
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       {{!-- As you add new fields, add them in here! --}}
       <div class="flexrow resource green-field">
-        <label>{{localize "AC2D20.TEMPLATES.Skill_Value"}}</label>
+        <label>{{localize "MC2D20.TEMPLATES.Skill_Value"}}</label>
         <input type="number" name="data.value" value="{{data.value}}" style="text-align: center;">
       </div>
       <div class="flexcol">
