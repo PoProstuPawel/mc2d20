@@ -1,13 +1,13 @@
 <div class="grid grid-3col">
     <div>
         <div class="label-number-box">
-            <label>{{localize 'AC2D20.TEMPLATES.scale'}}</label>
+            <label>{{localize 'MC2D20.TEMPLATES.scale'}}</label>
             <span>
                 <input type="number" class="borderless num-short-2" name="data.scale" value="{{data.scale}}" data-dtype="Number" min="0" />
             </span>
         </div>
         <div class="label-number-box">
-            <label>{{localize 'AC2D20.STRESS.stress'}}</label>
+            <label>{{localize 'MC2D20.STRESS.stress'}}</label>
             <span>
                 <input type="number" class="borderless num-short-2" name="data.stress.value" value="{{data.stress.value}}" data-dtype="Number" min="0" />
                 <label>/</label>
@@ -15,23 +15,23 @@
             </span>
         </div>
         <div class="label-number-box">
-            <label>{{localize 'AC2D20.RESISTANCE.armor'}}</label>
+            <label>{{localize 'MC2D20.RESISTANCE.armor'}}</label>
             <input type="number" class="borderless num-short-2" name="data.armorResistance.value" value="{{data.armorResistance.value}}" data-dtype="Number" min="0" />
         </div>
     </div>
     <div>
         <div class="label-number-box">
             <span>
-                <label class="roll-attribute clickable" data-attr='bra'>{{localize 'AC2D20.Ability.bra'}}</label>
+                <label class="roll-attribute clickable" data-attr='bra'>{{localize 'MC2D20.Ability.bra'}}</label>
                 <input type="number" class="borderless num-short-2" name="data.attributes.bra.value" value="{{data.attributes.bra.value}}" data-dtype="Number" min="0" />
             </span>
             <span>
-                <label>{{localize 'AC2D20.TEMPLATES.bonus'}}</label>
+                <label>{{localize 'MC2D20.TEMPLATES.bonus'}}</label>
                 <input type="number" class="borderless num-short-2" name="data.attributes.bra.bonus" value="{{data.attributes.bra.bonus}}" data-dtype="Number" min="0" />
             </span>
         </div>
         <div class="label-number-box">
-            <label>{{localize 'AC2D20.TEMPLATES.INJURIES'}}</label>
+            <label>{{localize 'MC2D20.TEMPLATES.INJURIES'}}</label>
             <span>
                 <input type="number" class="borderless num-short-2" name="data.injuries.value" value="{{data.injuries.value}}" data-dtype="Number" min="0" />
                 <label>/</label>
@@ -39,7 +39,7 @@
             </span>
         </div>
         <div class="label-number-box">
-            <label>{{localize 'AC2D20.TEMPLATES.speed'}}</label>
+            <label>{{localize 'MC2D20.TEMPLATES.speed'}}</label>
             <input type="number" class="borderless num-short-2" name="data.speed" value="{{data.speed}}" data-dtype="Number" min="0" />
         </div>
     </div>
@@ -87,7 +87,7 @@
             {{#each data.qualities as |item key|}}
             <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
                 <label>
-                    <input type="checkbox" name="data.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.VEHICLES.QUALITIES.' key)}}
+                    <input type="checkbox" name="data.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'MC2D20.VEHICLES.QUALITIES.' key)}}
                 </label>
 
                 {{#if (ne item.rank undefined)}}
@@ -115,14 +115,14 @@
                 </span>
                 <div class="skill-focuses">
                     <span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{data.focus}}</strong>,</span>
-                    <span>Range: <strong>{{localize (concat 'AC2D20.RANGE.' data.range)}}</strong>,&nbsp;</span>
+                    <span>Range: <strong>{{localize (concat 'MC2D20.RANGE.' data.range)}}</strong>,&nbsp;</span>
                     <span>Salvo: <strong>{{data.salvo}}</strong>&nbsp;</span>
                 </div>
                 <div class="qualities" style="font-size: 0.688rem;">
                     <span>Qualities:</span>
                     {{#each data.qualities as |qu quid|}}
                     {{#if (eq qu.value true)}}
-                    <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
+                    <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;"><strong>{{localize (concat 'MC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
                     {{/if}}
                     {{/each}}
                 </div>
