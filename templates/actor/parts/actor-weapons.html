@@ -18,8 +18,8 @@
     <div class="item weapon editable-item" data-item-id="{{item._id}}">
         <div class="row">
             <div class="cell f4 green cell-expander align-left align-center cell-name"><img src="{{item.img}}" />{{item.name}}</div>
-            <div class="cell f3 roll-weapon clickable focus-name align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{localize (concat 'AC2D20.FOCUS.' item.data.focus)}}</div>
-            <div class="cell f2 align-center">{{localize (concat 'AC2D20.RANGE.' item.data.range)}}</div>
+            <div class="cell f3 roll-weapon clickable focus-name align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{localize (concat 'MC2D20.FOCUS.' item.data.focus)}}</div>
+            <div class="cell f2 align-center">{{localize (concat 'MC2D20.RANGE.' item.data.range)}}</div>
             <div class="cell f2 stress clickable roll-stress align-center">{{item.data.stress}} <span class="cth-ico-cth"></span> + {{getAttributeBonus ../actor item.data.weaponType}} <span class="cth-ico-cth"></span></div>
             <div class="cell f2 align-center">
                 <input type="number" class="ammo-quantity num-short-3" style="height: 1.1rem;" name="data.ammo" value="{{item.data.ammo}}">
@@ -33,7 +33,7 @@
             <span><strong>Qualities: </strong>{{getWeaponQualities item.data}}&nbsp; | &nbsp;
                 <strong>Efects: </strong>{{getWeaponEffects item.data}}&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;
                 <strong>Salvo:</strong>{{item.data.salvo}}&nbsp;&nbsp; | &nbsp;
-                <strong>Size:</strong>{{localize (concat 'AC2D20.TEMPLATES.SizeLevels.' (getSizeLabel item.data.weight))}}
+                <strong>Size:</strong>{{localize (concat 'MC2D20.TEMPLATES.SizeLevels.' (getSizeLabel item.data.weight))}}
             </span>
         </div>
     </div>
