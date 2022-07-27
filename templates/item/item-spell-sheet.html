@@ -2,14 +2,14 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs" data-group="primary">
-        <img src="systems/ac2d20/assets/main-menu-slope.webp">
+        <img src="systems/mc2d20/assets/main-menu-slope.webp">
         <div class="buttons">
-            <a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
-            <a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
+            <a class="item" data-tab="attributes">{{localize "MC2D20.TEMPLATES.Attributes"}}</a>
+            <a class="item" data-tab="description">{{localize "MC2D20.TEMPLATES.Description"}}</a>
         </div>
     </nav>
 
-    {{> "systems/ac2d20/templates/item/parts/item-header.html"}}
+    {{> "systems/mc2d20/templates/item/parts/item-header.html"}}
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
@@ -23,7 +23,7 @@
         <div class="tab attributes" data-group="primary" data-tab="attributes">
 
             <div class="resource green-field flexrow">
-                <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.SpellType"}}</label>
+                <label style="margin-right: 5px;">{{localize "MC2D20.TEMPLATES.SpellType"}}</label>
                 <select name="data.spellType" id="">
                     {{#select data.spellType}}
                     <option value="ins">Traditional</option>
@@ -34,17 +34,17 @@
             </div>
             <div class="resource green-field flexrow">
                 <span>
-                    <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Skill"}}</label>
+                    <label style="margin-right: 5px;">{{localize "MC2D20.TEMPLATES.Skill"}}</label>
                     <select name="data.skill">
                         {{#select data.skill}}
-                        {{#each AC2D20.SKILLS as |skill key|}}
-                        <option value="{{skill.key}}">{{localize (concat 'AC2D20.SKILL.' skill.label)}}</option>
+                        {{#each MC2D20.SKILLS as |skill key|}}
+                        <option value="{{skill.key}}">{{localize (concat 'MC2D20.SKILL.' skill.label)}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
                 </span>
                 <span>
-                    <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Focus"}}</label>
+                    <label style="margin-right: 5px;">{{localize "MC2D20.TEMPLATES.Focus"}}</label>
                     <select name="data.focus">
                         {{#select data.focus}}
                         <option value="">{{localize foc}}</option>
@@ -59,21 +59,21 @@
             </div>
             <div class="resource flexrow green-field">
                 <span class="flex-group-left">
-                    <label>{{localize "AC2D20.TEMPLATES.Difficulty"}}</label>
+                    <label>{{localize "MC2D20.TEMPLATES.Difficulty"}}</label>
                     <input type="number" class="num-short-2" name="data.difficulty" value="{{data.difficulty}}">
                 </span>
                 <span class="flex flex-group-left" style="gap:5px">
-                    <label>{{localize "AC2D20.TEMPLATES.Duration"}}</label>
+                    <label>{{localize "MC2D20.TEMPLATES.Duration"}}</label>
                     <input type="text" name="data.duration" value="{{data.duration}}">
                 </span>
             </div>
             <div class="resource flexrow green-field">
                 <span class="flex flex-group-left" style="gap:5px">
-                    <label>{{localize "AC2D20.TEMPLATES.Cost"}}</label>
+                    <label>{{localize "MC2D20.TEMPLATES.Cost"}}</label>
                     <input type="number" class="num-short-2" name="data.cost" value="{{data.cost}}">
                 </span>
                 <span class="flex flex-group-left" style="gap:5px">
-                    <label>{{localize "AC2D20.TEMPLATES.CostEffects"}}</label>
+                    <label>{{localize "MC2D20.TEMPLATES.CostEffects"}}</label>
                     <input type="text" name="data.costEffects" value="{{data.costEffects}}">
                 </span>
             </div>
@@ -81,12 +81,12 @@
             <hr>
 
             <div class="section-title" style="margin-bottom: 0.313rem;">
-                <h3>{{localize "AC2D20.TEMPLATES.Ritual"}}</h3>
+                <h3>{{localize "MC2D20.TEMPLATES.Ritual"}}</h3>
                 <span class="right-slope olive"></span>
             </div>
 
             <div class="resource flexrow green-field">
-                <label>{{localize "AC2D20.TEMPLATES.ritual_stress"}}</label>
+                <label>{{localize "MC2D20.TEMPLATES.ritual_stress"}}</label>
                 <span class="flex flex-group-left" style="gap:5px">
                     <input type="number" class="num-short-2" name="data.ritualStress.value" value="{{data.ritualStress.value}}">
                     <label>/</label>
@@ -94,7 +94,7 @@
                 </span>
             </div>
             <div class="resource flexrow green-field">
-                <label>{{localize "AC2D20.TEMPLATES.ritual_steps"}}</label>
+                <label>{{localize "MC2D20.TEMPLATES.ritual_steps"}}</label>
                 <span class="flex flex-group-left" style="gap:5px">
                     <input type="number" class="num-short-2" name="data.ritualSteps.value" value="{{data.ritualSteps.value}}">
                     <label>/</label>
@@ -102,12 +102,12 @@
                 </span>
             </div>
             <div class="resource flexrow green-field">
-                <label>{{localize "AC2D20.TEMPLATES.ritual_resistance"}}</label>
+                <label>{{localize "MC2D20.TEMPLATES.ritual_resistance"}}</label>
                 <input type="text" name="data.ritualResistance" value="{{data.ritualResistance}}">
             </div>
             <div class="resource flexrow green-field">
                 <span class="flex flex-group-left" style="gap:5px">
-                    <label>{{localize "AC2D20.TEMPLATES.ritual_requirements"}}</label>
+                    <label>{{localize "MC2D20.TEMPLATES.ritual_requirements"}}</label>
                     <input type="text" name="data.ritualRequirements" value="{{data.ritualRequirements}}">
                 </span>
             </div>
