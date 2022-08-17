@@ -9,7 +9,7 @@ export class ACItemSheet extends ItemSheet {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["ac2d20", "sheet", "item"],
+            classes: ["mc2d20", "sheet", "item"],
             width: 520,
             height: 560,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
@@ -18,7 +18,7 @@ export class ACItemSheet extends ItemSheet {
 
     /** @override */
     get template() {
-        const path = "systems/ac2d20/templates/item";
+        const path = "systems/mc2d20/templates/item";
         return `${path}/item-${this.item.data.type}-sheet.html`;
     }
 
@@ -44,12 +44,12 @@ export class ACItemSheet extends ItemSheet {
         context.flags = itemData.flags;
 
         context.effects = prepareActiveEffectCategories(this.item.effects);
-        context.AC2D20 = CONFIG.AC2D20;
+        context.MC2D20 = CONFIG.MC2D20;
 
 
         // Prepare Aditional Data
         // if (itemData.type == 'apaprel') {
-        //context.apparelTypes = CONFIG.AC2D20.APPAREL_TYPE;
+        //context.apparelTypes = CONFIG.MC2D20.APPAREL_TYPE;
         //}
 
         return context;
