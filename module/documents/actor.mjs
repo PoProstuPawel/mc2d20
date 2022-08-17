@@ -3,7 +3,7 @@
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class ACActor extends Actor {
+export class MCActor extends Actor {
 
     /** @override */
     prepareData() {
@@ -28,7 +28,7 @@ export class ACActor extends Actor {
     prepareDerivedData() {
         const actorData = this.data;
         const data = actorData.data;
-        const flags = actorData.flags.ac2d20 || {};
+        const flags = actorData.flags.mc2d20 || {};
 
         // Make separate methods for each Actor type (character, npc, etc.) to keep
         // things organized.
@@ -134,7 +134,7 @@ export class ACActor extends Actor {
     async _preCreate(data, options, user) {
         await super._preCreate(data, options, user);
 
-        let ico = `systems/ac2d20/assets/doc-icons/${data.type}.svg`;
+        let ico = `systems/mc2d20/assets/doc-icons/${data.type}.svg`;
         this.data.update({ 'img': ico });
 
         // Setup Tokens
@@ -152,7 +152,7 @@ export class ACActor extends Actor {
 
         // Add Skills to Characters
         if (this.type === 'character') {
-            let packSkills = await game.packs.get('ac2d20.skills').getDocuments();
+            let packSkills = await game.packs.get('mc2d20.skills').getDocuments();
             const items = this.items.map(i => i.toObject());
             packSkills.forEach(s => {
                 items.push(s.toObject());
