@@ -1,4 +1,4 @@
-export default class DieACChallenge extends Die {
+export default class DieMCChallenge extends Die {
     constructor(termData) {
         termData.faces = 6;
         super(termData);
@@ -9,12 +9,12 @@ export default class DieACChallenge extends Die {
     /** @override */
     getResultLabel(result) {
         return {
-            "1": '<img src="systems/ac2d20/assets/dice/d1.webp" />',
-            "2": '<img src="systems/ac2d20/assets/dice/d2.webp" />',
-            "3": '<img src="systems/ac2d20/assets/dice/d3.webp" />',
-            "4": '<img src="systems/ac2d20/assets/dice/d4.webp" />',
-            "5": '<img src="systems/ac2d20/assets/dice/d5.webp" />',
-            "6": '<img src="systems/ac2d20/assets/dice/d6.webp" />'
+            "1": '<img src="systems/mc2d20/assets/dice/d1.webp" />',
+            "2": '<img src="systems/mc2d20/assets/dice/d2.webp" />',
+            "3": '<img src="systems/mc2d20/assets/dice/d3.webp" />',
+            "4": '<img src="systems/mc2d20/assets/dice/d4.webp" />',
+            "5": '<img src="systems/mc2d20/assets/dice/d5.webp" />',
+            "6": '<img src="systems/mc2d20/assets/dice/d6.webp" />'
         }[result.result];
     }
 
@@ -32,7 +32,7 @@ export default class DieACChallenge extends Die {
         return this.results.reduce((t, r) => {
             if (!r.active) return t;
             if (r.count !== undefined) return t + r.count;
-            return t + DieACChallenge.getValue(r.result);
+            return t + DieMCChallenge.getValue(r.result);
         }, 0);
     }
 
@@ -45,15 +45,15 @@ export default class DieACChallenge extends Die {
 
     get resultValues() {
         return this.results.map(result => {
-            return DieACChallenge.getResultLabel(result.result);
+            return DieMCChallenge.getResultLabel(result.result);
         });
     }
 
     static getValue(dieSide) {
         // 1 if Effect, otherwise take the value
-        return typeof DieACChallenge.values[dieSide] === 'string'
+        return typeof DieMCChallenge.values[dieSide] === 'string'
             ? 1
-            : DieACChallenge.values[dieSide];
+            : DieMCChallenge.values[dieSide];
     }
 
 
