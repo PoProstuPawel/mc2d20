@@ -14,7 +14,7 @@ export class ACItem extends Item {
 
     async _preCreate(data, options, user) {
         await super._preCreate(data, options, user);
-        let ico = `systems/ac2d20/assets/doc-icons/${data.type}.svg`;
+        let ico = `systems/mc2d20/assets/doc-icons/${data.type}.svg`;
         this.data.update({ 'img': ico });
     }
 
