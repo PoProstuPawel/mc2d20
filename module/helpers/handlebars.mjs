@@ -65,7 +65,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     /* -------------------------------------------- */
-    /*  AC2D20 HELPERS                             */
+    /*  MC2D20 HELPERS                             */
     /* -------------------------------------------- */
 
     Handlebars.registerHelper('damageFaIconClass', function (str) {
@@ -80,7 +80,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('getSkillFocusList', function (key) {
-        const _skill = CONFIG.AC2D20.SKILLS.filter((s) => s.key === key)
+        const _skill = CONFIG.MC2D20.SKILLS.filter((s) => s.key === key)
         return _skill[0].focuses;
     });
 
