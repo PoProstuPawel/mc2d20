@@ -1,17 +1,17 @@
-import { AC2D20 } from "../helpers/config.mjs";
+import { MC2D20 } from "../helpers/config.mjs";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class ACActorSheet extends ActorSheet {
+export class MCActorSheet extends ActorSheet {
 
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["ac2d20", "sheet", "actor"],
-            template: "systems/ac2d20/templates/actor/actor-sheet.html",
+            classes: ["mc2d20", "sheet", "actor"],
+            template: "systems/mc2d20/templates/actor/actor-sheet.html",
             width: 720,
             height: 780,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }]
@@ -20,7 +20,7 @@ export class ACActorSheet extends ActorSheet {
 
     /** @override */
     get template() {
-        return `systems/ac2d20/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+        return `systems/mc2d20/templates/actor/actor-${this.actor.data.type}-sheet.html`;
     }
 
     /* -------------------------------------------- */
@@ -490,9 +490,9 @@ export class ACActorSheet extends ActorSheet {
         /* -------------------------------------------- */
         /* ADD RIGH CLICK CONTENT MENU
         /* -------------------------------------------- */
-        const editLabel = game.i18n.localize("AC2D20.EDIT");
-        const deleteLabel = game.i18n.localize("AC2D20.DELETE");
-        const postLabel = game.i18n.localize("AC2D20.POST");
+        const editLabel = game.i18n.localize("MC2D20.EDIT");
+        const deleteLabel = game.i18n.localize("MC2D20.DELETE");
+        const postLabel = game.i18n.localize("MC2D20.POST");
 
         let menu_items = [
             {
@@ -600,7 +600,7 @@ export class ACActorSheet extends ActorSheet {
     }
     _onRollSkill(skillName, rank, attribute, focus) {
         let complication = 20 - this.actor.getComplicationFromInjuries();
-        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.data.data })
+        game.mc2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.data.data })
     }
 
     _onItemSummary(event) {
