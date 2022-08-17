@@ -1,18 +1,18 @@
-import { AC2D20 } from "../helpers/config.mjs";
+import { MC2D20 } from "../helpers/config.mjs";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
-import { ACActorSheet } from "./actor-sheet.mjs";
+import { MCActorSheet } from "./actor-sheet.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
- * @extends {ACActorSheet}
+ * @extends {MCActorSheet}
  */
-export class ACVehicleSheet extends ACActorSheet {
+export class MCVehicleSheet extends MCActorSheet {
 
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["ac2d20", "sheet", "actor"],
-            template: "systems/ac2d20/templates/actor/vehicle-sheet.html",
+            classes: ["mc2d20", "sheet", "actor"],
+            template: "systems/mc2d20/templates/actor/vehicle-sheet.html",
             width: 550,
             height: 550,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }]
