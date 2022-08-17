@@ -1,20 +1,20 @@
 // Import document classes.
-import { ACActor } from "./documents/actor.mjs";
-import { ACItem } from "./documents/item.mjs";
+import { MCActor } from "./documents/actor.mjs";
+import { MCItem } from "./documents/item.mjs";
 // Import sheet classes.
-import { ACActorSheet } from "./sheets/actor-sheet.mjs";
-import { ACNPCSheet } from "./sheets/npc-sheet.mjs";
-import { ACVehicleSheet } from "./sheets/vehicle-sheet.mjs";
-import { ACItemSheet } from "./sheets/item-sheet.mjs";
+import { MCActorSheet } from "./sheets/actor-sheet.mjs";
+import { MCNPCSheet } from "./sheets/npc-sheet.mjs";
+import { MCVehicleSheet } from "./sheets/vehicle-sheet.mjs";
+import { MCItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
-import { AC2D20 } from "./helpers/config.mjs";
+import { MC2D20 } from "./helpers/config.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { registerHandlebarsHelpers } from "./helpers/handlebars.mjs"
 //Import Roll2D20
-import { Roller2D20 } from "./roller/ac2d20-roller.mjs"
+import { Roller2D20 } from "./roller/mc2d20-roller.mjs"
 import { Dialog2d20 } from './roller/dialog2d20.js'
 import { DialogD6 } from './roller/dialogD6.js'
-import DieACChallenge from './roller/challengeDie.js'
+import DieMCChallenge from './roller/challengeDie.js'
 //Settings
 import { registerSettings } from './settings.js';
 //Momentum
@@ -30,16 +30,16 @@ Hooks.once('init', async function () {
     // Add utility classes to the global game object so that they're more easily
     // accessible in global contexts.
 
-    game.ac2d20 = {
-        ACActor,
-        ACItem,
+    game.mc2d20 = {
+        MCActor,
+        MCItem,
         Roller2D20,
         Dialog2d20,
         DialogD6
     };
 
     // Add custom constants for configuration.
-    CONFIG.AC2D20 = AC2D20;
+    CONFIG.MC2D20 = MC2D20;
 
     /**
    * Set an initiative formula for the system
