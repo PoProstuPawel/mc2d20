@@ -1,43 +1,43 @@
 {
-    "AC2D20.AbilityAbbr.agi": "agi",
-    "AC2D20.AbilityAbbr.awa": "awa",
-    "AC2D20.AbilityAbbr.coo": "coo",
-    "AC2D20.AbilityAbbr.int": "int",
-    "AC2D20.AbilityAbbr.men": "men",
-    "AC2D20.AbilityAbbr.per": "per",
-    "AC2D20.AbilityAbbr.men": "phy",
-    "AC2D20.AbilityAbbr.per": "str",
-    "AC2D20.Ability.agi": "Agility",
-    "AC2D20.Ability.awa": "Awareness",
-    "AC2D20.Ability.coo": "Coordination",
-    "AC2D20.Ability.int": "Intelligence",
-    "AC2D20.Ability.men": "Mental",
-    "AC2D20.Ability.per": "Personality",
-    "AC2D20.Ability.phy": "Physique",
-    "AC2D20.Ability.str": "Strength"
-    "AC2D20.EffectCreate": "Create Effect",
-    "AC2D20.EffectDelete": "Delete Effect",
-    "AC2D20.EffectEdit": "Edit Effect",
-    "AC2D20.EffectToggle": "Toggle Effect",
-    "AC2D20.equipped": "Equipped",
-    "AC2D20.STRESS": {
+    "MC2D20.AbilityAbbr.agi": "agi",
+    "MC2D20.AbilityAbbr.awa": "awa",
+    "MC2D20.AbilityAbbr.coo": "coo",
+    "MC2D20.AbilityAbbr.int": "int",
+    "MC2D20.AbilityAbbr.men": "men",
+    "MC2D20.AbilityAbbr.per": "per",
+    "MC2D20.AbilityAbbr.men": "phy",
+    "MC2D20.AbilityAbbr.per": "str",
+    "MC2D20.Ability.agi": "Agility",
+    "MC2D20.Ability.awa": "Awareness",
+    "MC2D20.Ability.coo": "Coordination",
+    "MC2D20.Ability.int": "Intelligence",
+    "MC2D20.Ability.men": "Mental",
+    "MC2D20.Ability.per": "Personality",
+    "MC2D20.Ability.phy": "Physique",
+    "MC2D20.Ability.str": "Strength"
+    "MC2D20.EffectCreate": "Create Effect",
+    "MC2D20.EffectDelete": "Delete Effect",
+    "MC2D20.EffectEdit": "Edit Effect",
+    "MC2D20.EffectToggle": "Toggle Effect",
+    "MC2D20.equipped": "Equipped",
+    "MC2D20.STRESS": {
         "current": "Current Stress",
         "stress": "Stress",
         "max": "Max Stress"
     },
-    "AC2D20.OTHER": "Other",
-    "AC2D20.RANGE": {
+    "MC2D20.OTHER": "Other",
+    "MC2D20.RANGE": {
         "reach":"Reach",
         "close":"Close",
         "medium":"Medium",
         "long":"Long",
         "extreme":"Extreme"
     },
-    "AC2D20.RESISTANCE": {
+    "MC2D20.RESISTANCE": {
         "armor": "Armor",
         "courage": "courage"
     },
-    "AC2D20.SKILL": {
+    "MC2D20.SKILL": {
         "ACROBATICS": "Acrobatics",
         "CLOSE COMBAT": "Close Combat",
         "UNARMED COMBAT": "Unarmed Combat",
@@ -66,7 +66,7 @@
         "RESISTANCE": "Resistance",
         "ATHLETICS": "Athletics"       
     },
-    "AC2D20.FOCUS": {
+    "MC2D20.FOCUS": {
         "Acrobatics": "Acrobatics",
         "Close Combat": "Close Combat",
         "Unarmed Combat": "Unarmed Combat",
@@ -95,14 +95,14 @@
         "Resistance": "Resistance",
         "Athletics": "Athletics" 
     },
-    "AC2D20.SPELL":{
+    "MC2D20.SPELL":{
         "SpellTypes":{
             "men":"Dark Symmetry",
             "men":"Art",
             "men":"KI"
         }
     },
-    "AC2D20.TEMPLATES": {
+    "MC2D20.TEMPLATES": {
         "Salvo":"Salvo",
         "Resistance":"Resistance",
         "Qualities":"Qualities",
@@ -215,7 +215,7 @@
         "ritual_resistance": "Resistance",
         "ritual_requirements":"Requirements"
     },
-    "AC2D20.UI": {
+    "MC2D20.UI": {
         "Add": "Add",
         "CarryWeight": "Carry Weight",
         "Cost": "Cost",
@@ -233,7 +233,7 @@
         "UNSORTED": "Unsorted",
         "Weight": "Weight"
     },
-    "AC2D20.WEAPONS": {
+    "MC2D20.WEAPONS": {
         "type":"Weapon Type",
         "damageEffect": {
             "area": "Area",
@@ -280,14 +280,14 @@
             "wil": "Mental"
         }
     },
-    "AC2D20.ARMOR": {
+    "MC2D20.ARMOR": {
         "qualities":{
             "heavy":"Heavy",
             "uncomfortable":"Uncomfortable",
             "shield":"Shield"
         }
     },
-    "AC2D20.VEHICLES.QUALITIES":{
+    "MC2D20.VEHICLES.QUALITIES":{
         "cargo":"Cargo",
         "cumbersome":"Cumbersome",
         "enclosed":"Enclosed",
