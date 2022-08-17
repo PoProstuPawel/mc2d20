@@ -1,28 +1,28 @@
-export const AC2D20 = {};
+export const MC2D20 = {};
 
-AC2D20.attributes = {
-  "agi": "AC2D20.AbilityAgi",
-  "awa": "AC2D20.AbilityAwa",
-  "coo": "AC2D20.AbilityCoo",
-  "int": "AC2D20.AbilityInt",
-  "men": "AC2D20.AbilityMen",
-  "per": "AC2D20.AbilityPer",
-  "phy": "AC2D20.AbilityPhy",
-  "str": "AC2D20.AbilityStr"  
+MC2D20.attributes = {
+  "agi": "MC2D20.AbilityAgi",
+  "awa": "MC2D20.AbilityAwa",
+  "coo": "MC2D20.AbilityCoo",
+  "int": "MC2D20.AbilityInt",
+  "men": "MC2D20.AbilityMen",
+  "per": "MC2D20.AbilityPer",
+  "phy": "MC2D20.AbilityPhy",
+  "str": "MC2D20.AbilityStr"  
 };
 
-AC2D20.abilityAbbreviations = {
-  "agi": "AC2D20.AbilityAgiAbr",
-  "awa": "AC2D20.AbilityAwaAbr",
-  "coo": "AC2D20.AbilityCooAbr",
-  "int": "AC2D20.AbilityIntAbr",
-  "men": "AC2D20.AbilityMenAbr",
-  "per": "AC2D20.AbilityPerAbr",
-  "phy": "AC2D20.AbilityPhyAbr",
-  "str": "AC2D20.AbilityStrAbr",
+MC2D20.abilityAbbreviations = {
+  "agi": "MC2D20.AbilityAgiAbr",
+  "awa": "MC2D20.AbilityAwaAbr",
+  "coo": "MC2D20.AbilityCooAbr",
+  "int": "MC2D20.AbilityIntAbr",
+  "men": "MC2D20.AbilityMenAbr",
+  "per": "MC2D20.AbilityPerAbr",
+  "phy": "MC2D20.AbilityPhyAbr",
+  "str": "MC2D20.AbilityStrAbr",
 };
 
-AC2D20.SKILLS = [
+MC2D20.SKILLS = [
   {
     'label': 'ACROBATICS',
     'key': "Acrobatics",
@@ -165,15 +165,15 @@ AC2D20.SKILLS = [
   }
 ];
 
-AC2D20.Size = ["Trivial", "Minor", "Major"];
+MC2D20.Size = ["Trivial", "Minor", "Major"];
 
-AC2D20.WEAPONS = {
+MC2D20.WEAPONS = {
   "range": {
-    "reach": "AC2D20.RANGE.reach",
-    "close": "AC2D20.RANGE.close",
-    "medium": "AC2D20.RANGE.medium",
-    "long": "AC2D20.RANGE.long",
-    "extreme": "AC2D20.RANGE.extreme"
+    "reach": "MC2D20.RANGE.reach",
+    "close": "MC2D20.RANGE.close",
+    "medium": "MC2D20.RANGE.medium",
+    "long": "MC2D20.RANGE.long",
+    "extreme": "MC2D20.RANGE.extreme"
   },
   "weaponTypes": [{
     'label': "Melee",
