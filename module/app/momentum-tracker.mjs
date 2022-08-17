@@ -12,8 +12,8 @@ export class MomentumTracker extends Application {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             title: "AP Tracker",
-            template: "systems/ac2d20/templates/ap/momentum-tracker.html",
-            classes: ["ac2d20", "momentum-tracker"],
+            template: "systems/mc2d20/templates/ap/momentum-tracker.html",
+            classes: ["mc2d20", "momentum-tracker"],
             id: "momentum-tracker-app",
             popOut: false,
             resizable: false,
@@ -25,13 +25,13 @@ export class MomentumTracker extends Application {
     getData() {
         super.getData();
         this.data["isGM"] = game.user.isGM;
-        this.data["partyMomentum"] = game.settings.get('ac2d20', 'partyMomentum');
-        this.data["gmMomentum"] = game.settings.get('ac2d20', 'gmMomentum');
-        this.data["maxMomentum"] = game.settings.get('ac2d20', 'maxMomentum');        
+        this.data["partyMomentum"] = game.settings.get('mc2d20', 'partyMomentum');
+        this.data["gmMomentum"] = game.settings.get('mc2d20', 'gmMomentum');
+        this.data["maxMomentum"] = game.settings.get('mc2d20', 'maxMomentum');        
         if(game.user.isGM) this.data["showGMMomentumToPlayers"] = true;
-        else this.data["showGMMomentumToPlayers"] = game.settings.get('ac2d20', 'gmMomentumShowToPlayers')
+        else this.data["showGMMomentumToPlayers"] = game.settings.get('mc2d20', 'gmMomentumShowToPlayers')
         if(game.user.isGM) this.data["maxAppShowToPlayers"] = true;
-        else this.data["maxAppShowToPlayers"] = game.settings.get('ac2d20', 'maxAppShowToPlayers')
+        else this.data["maxAppShowToPlayers"] = game.settings.get('mc2d20', 'maxAppShowToPlayers')
         return this.data;
     }
 
@@ -56,8 +56,8 @@ export class MomentumTracker extends Application {
         html.find('.ap-add, .ap-sub').click(ev => {
             const type = $(ev.currentTarget).parents('.ap-resource').attr('data-type');
             const change = $(ev.currentTarget).hasClass('ap-add') ? 1 : -1;
-            let currentValue = game.settings.get('ac2d20', type);
-            let maxMomentum = game.settings.get('ac2d20', 'maxMomentum');
+            let currentValue = game.settings.get('mc2d20', type);
+            let maxMomentum = game.settings.get('mc2d20', 'maxMomentum');
             if (parseInt(currentValue) < maxMomentum || parseInt(currentValue) > 0) {
                 let newValue = parseInt(currentValue) + change;
                 MomentumTracker.setAP(type, newValue);
@@ -80,29 +80,29 @@ export class MomentumTracker extends Application {
             return;
         }
 
-        let maxMomentum = game.settings.get('ac2d20', 'maxMomentum');
-        let partyMomentum = game.settings.get('ac2d20', 'partyMomentum');
+        let maxMomentum = game.settings.get('mc2d20', 'maxMomentum');
+        let partyMomentum = game.settings.get('mc2d20', 'partyMomentum');
         if (partyMomentum > value && type === 'maxMomentum') {
-            await game.settings.set('ac2d20', 'maxMomentum', value);
-            await game.settings.set('ac2d20', 'partyMomentum', value);
+            await game.settings.set('mc2d20', 'maxMomentum', value);
+            await game.settings.set('mc2d20', 'partyMomentum', value);
             MomentumTracker.renderApTracker();
-            game.socket.emit('system.ac2d20', { operation: 'updateAP' });
+            game.socket.emit('system.mc2d20', { operation: 'updateAP' });
             return;
         }
 
         if (value > maxMomentum && type === 'partyMomentum') {
-            await game.settings.set('ac2d20', type, maxMomentum);
+            await game.settings.set('mc2d20', type, maxMomentum);
             MomentumTracker.renderApTracker();
         } else if (value < 0) {
-            await game.settings.set('ac2d20', type, 0);
+            await game.settings.set('mc2d20', type, 0);
             MomentumTracker.renderApTracker();
         } else {
-            await game.settings.set('ac2d20', type, value);
+            await game.settings.set('mc2d20', type, value);
             MomentumTracker.renderApTracker();
         }
 
         // emit socket event for the players to update
-        game.socket.emit('system.ac2d20', { operation: 'updateAP' });
+        game.socket.emit('system.mc2d20', { operation: 'updateAP' });
     }
 
     static updateAP() {
@@ -114,7 +114,7 @@ Hooks.once("ready", () => {
     if (MomentumTracker._instance) return;
     let ap = new MomentumTracker();
     MomentumTracker.renderApTracker();
-    game.socket.on("system.ac2d20", (ev) => {
+    game.socket.on("system.mc2d20", (ev) => {
         if (ev.operation === "setAP") {
             if (game.user.isGM)
                 MomentumTracker.setAP(ev.data.type, ev.data.value);
