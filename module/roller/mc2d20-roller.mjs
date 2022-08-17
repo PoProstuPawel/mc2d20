@@ -200,15 +200,15 @@ export class Roller2D20 {
         });
     }
 
-    static async addD6({ rollname = "Roll D6", dicenum = 2, ac2d20Roll = null, dicesRolled = [], itemId = null, actorId = null } = {}) {
+    static async addD6({ rollname = "Roll D6", dicenum = 2, mc2d20Roll = null, dicesRolled = [], itemId = null, actorId = null } = {}) {
         let formula = `${dicenum}ds`;
         let _roll = new Roll(formula);
         await _roll.evaluate({ async: true });
-        let newRollName = `${ac2d20Roll.rollname} [+ ${dicenum} DC]`;
-        let oldDiceRolled = ac2d20Roll.dicesRolled;
+        let newRollName = `${mc2d20Roll.rollname} [+ ${dicenum} DC]`;
+        let oldDiceRolled = mc2d20Roll.dicesRolled;
         await Roller2D20.parseD6Roll({
             rollname: newRollName,
-            roll: _roll,
+            roll: _roll
             dicesRolled: dicesRolled,
             addDice: oldDiceRolled,
             itemId: itemId,
@@ -239,7 +239,7 @@ export class Roller2D20 {
                     for (let de in item.data.data.effect) {
                         if (item.data.data.effect[de].value) {
                             let rank = item.data.data.effect[de].rank ?? "";
-                            let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
+                            let damageEffectLabel = game.i18n.localize(`MC2D20.WEAPONS.damageEffect.${de}`);
                             let efectLabel = `${damageEffectLabel}${rank}`;
                             itemEffects.push(efectLabel);
                         }
@@ -248,7 +248,7 @@ export class Roller2D20 {
 
                     for (let qu in item.data.data.qualities) {
                         if (item.data.data.qualities[qu].value) {
-                            let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
+                            let quLabel = game.i18n.localize(`MC2D20.WEAPONS.qualities.${qu}`);
                             itemQualities.push(quLabel)
                         }
                     }
@@ -261,7 +261,7 @@ export class Roller2D20 {
         //     for (let de in weapon.data.effect) {
         //         if (weapon.data.effect[de].value) {
         //             let rank = weapon.data.effect[de].rank ?? "";
-        //             let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
+        //             let damageEffectLabel = game.i18n.localize(`MC2D20.WEAPONS.damageEffect.${de}`);
         //             let efectLabel = `${damageEffectLabel}${rank}`;
         //             weaponDamageEffectsList.push(efectLabel);
         //         }
