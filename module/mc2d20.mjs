@@ -57,11 +57,11 @@ Hooks.once('init', async function () {
 
     // Register sheet application classes
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("ac2d20", ACActorSheet, { types: ["character"], makeDefault: true });
-    Actors.registerSheet("ac2d20", ACNPCSheet, { types: ["npc"], makeDefault: true });
-    Actors.registerSheet("ac2d20", ACVehicleSheet, { types: ["vehicle"], makeDefault: true });
+    Actors.registerSheet("mc2d20", ACActorSheet, { types: ["character"], makeDefault: true });
+    Actors.registerSheet("mc2d20", ACNPCSheet, { types: ["npc"], makeDefault: true });
+    Actors.registerSheet("mc2d20", ACVehicleSheet, { types: ["vehicle"], makeDefault: true });
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("ac2d20", ACItemSheet, { makeDefault: true });
+    Items.registerSheet("mc2d20", ACItemSheet, { makeDefault: true });
 
     // Register custom system settings
     registerSettings();
@@ -85,21 +85,21 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                 ui.notifications.notify('Select Dice you want to Reroll');
             }
             else {
-                let ac2d20Roll = message.data.flags.ac2d20roll;
-                if (ac2d20Roll.diceFace == "d20") {
+                let mc2d20Roll = message.data.flags.mc2d20roll;
+                if (mc2d20Roll.diceFace == "d20") {
                     Roller2D20.rerollD20({
-                        rollname: ac2d20Roll.rollname,
+                        rollname: mc2d20Roll.rollname,
                         rerollIndexes: rerollIndex,
-                        successTreshold: ac2d20Roll.successTreshold,
-                        critTreshold: ac2d20Roll.critTreshold,
-                        complicationTreshold: ac2d20Roll.complicationTreshold,
-                        dicesRolled: ac2d20Roll.dicesRolled
+                        successTreshold: mc2d20Roll.successTreshold,
+                        critTreshold: mc2d20Roll.critTreshold,
+                        complicationTreshold: mc2d20Roll.complicationTreshold,
+                        dicesRolled: mc2d20Roll.dicesRolled
                     });
-                } else if (ac2d20Roll.diceFace == "d6") {
+                } else if (mc2d20Roll.diceFace == "d6") {
                     Roller2D20.rerollD6({
-                        rollname: ac2d20Roll.rollname,
+                        rollname: mc2d20Roll.rollname,
                         rerollIndexes: rerollIndex,
-                        dicesRolled: ac2d20Roll.dicesRolled,
+                        dicesRolled: mc2d20Roll.dicesRolled,
                         itemId: message.data.flags.itemId,
                         actorId: message.data.flags.actorId,
                     });
@@ -123,10 +123,10 @@ Hooks.on('renderChatMessage', (message, html, data) => {
     if (addBtn.length > 0) {
         addBtn[0].setAttribute('data-messageId', message.id);
         addBtn.click((ev) => {
-            let ac2d20Roll = message.data.flags.ac2d20roll;
+            let mc2d20Roll = message.data.flags.mc2d20roll;
             let itemId = message.data.flags.itemId;
             let actorId = message.data.flags.actorId;
-            game.ac2d20.DialogD6.createDialog({ rollname: ac2d20Roll.rollname, diceNum: 1, ac2d20Roll: ac2d20Roll, itemId: itemId, actorId: actorId })
+            game.mc2d20.DialogD6.createDialog({ rollname: mc2d20Roll.rollname, diceNum: 1, mc2d20Roll: mc2d20Roll, itemId: itemId, actorId: actorId })
         });
     }
 
@@ -140,13 +140,13 @@ Hooks.on('renderChatMessage', (message, html, data) => {
 
 Hooks.once("diceSoNiceReady", (dice3d) => {
     dice3d.addSystem(
-        { id: "ac2d20", name: "Achtung Cthulhu 2d20" },
+        { id: "mc2d20", name: "Achtung Cthulhu 2d20" },
         true
     );
 
     dice3d.addColorset(
         {
-            name: "ac2d20",
+            name: "mc2d20",
             description: "Achtung Cthulhu 2d20",
             category: "Colors",
             foreground: "#000000",
@@ -159,14 +159,14 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     dice3d.addDicePreset({
         type: "ds",
         labels: [
-            "systems/ac2d20/assets/dice/d1.webp",
-            "systems/ac2d20/assets/dice/d2.webp",
-            "systems/ac2d20/assets/dice/d3.webp",
-            "systems/ac2d20/assets/dice/d4.webp",
-            "systems/ac2d20/assets/dice/d5.webp",
-            "systems/ac2d20/assets/dice/d6.webp",
+            "systems/mc2d20/assets/dice/d1.webp",
+            "systems/mc2d20/assets/dice/d2.webp",
+            "systems/mc2d20/assets/dice/d3.webp",
+            "systems/mc2d20/assets/dice/d4.webp",
+            "systems/mc2d20/assets/dice/d5.webp",
+            "systems/mc2d20/assets/dice/d6.webp",
         ],
-        system: "ac2d20",
-        colorset: "ac2d20"
+        system: "mc2d20",
+        colorset: "mc2d20"
     });
 });
