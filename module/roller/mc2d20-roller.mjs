@@ -88,20 +88,20 @@ export class Roller2D20 {
             results: dicesRolled,
             successTreshold: successTreshold
         }
-        const html = await renderTemplate("systems/ac2d20/templates/chat/roll2d20.html", rollData);
-        let ac2d20Roll = {}
-        ac2d20Roll.rollname = rollname;
-        ac2d20Roll.dicesRolled = dicesRolled;
-        ac2d20Roll.successTreshold = successTreshold;
-        ac2d20Roll.critTreshold = critTreshold;
-        ac2d20Roll.complicationTreshold = complicationTreshold;
-        ac2d20Roll.rerollIndexes = rerollIndexes;
-        ac2d20Roll.diceFace = "d20";
+        const html = await renderTemplate("systems/mc2d20/templates/chat/roll2d20.html", rollData);
+        let mc2d20Roll = {}
+        mc2d20Roll.rollname = rollname;
+        mc2d20Roll.dicesRolled = dicesRolled;
+        mc2d20Roll.successTreshold = successTreshold;
+        mc2d20Roll.critTreshold = critTreshold;
+        mc2d20Roll.complicationTreshold = complicationTreshold;
+        mc2d20Roll.rerollIndexes = rerollIndexes;
+        mc2d20Roll.diceFace = "d20";
         let chatData = {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
-            flags: { ac2d20roll: ac2d20Roll },
+            flags: { mc2d20roll: mc2d20Roll },
             type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             roll: roll,
         };
@@ -270,7 +270,7 @@ export class Roller2D20 {
         //     for (let qu in weapon.data.qualities) {
         //         if (weapon.data.qualities[qu].value) {
         //             //let rank = weapon.data.data.effect[qu].rank ?? "";
-        //             let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
+        //             let quLabel = game.i18n.localize(`MC2D20.WEAPONS.qualities.${qu}`);
         //             //let quLabel = `${damageEffectLabel}${rank}`;
         //             weaponQualityList.push(quLabel);
         //         }
@@ -293,20 +293,20 @@ export class Roller2D20 {
             itemEffects: itemEffects,
             itemQualities: itemQualities
         }
-        const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.html", rollData);
-        let ac2d20Roll = {}
-        ac2d20Roll.rollname = rollname;
-        ac2d20Roll.dicesRolled = dicesRolled;
-        ac2d20Roll.damage = damage;
-        ac2d20Roll.effects = effects;
-        ac2d20Roll.rerollIndexes = rerollIndexes;
-        ac2d20Roll.diceFace = "d6";
+        const html = await renderTemplate("systems/mc2d20/templates/chat/rollD6.html", rollData);
+        let mc2d20Roll = {}
+        mc2d20Roll.rollname = rollname;
+        mc2d20Roll.dicesRolled = dicesRolled;
+        mc2d20Roll.damage = damage;
+        mc2d20Roll.effects = effects;
+        mc2d20Roll.rerollIndexes = rerollIndexes;
+        mc2d20Roll.diceFace = "d6";
 
         let chatData = {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
-            flags: { ac2d20roll: ac2d20Roll, itemId: itemId, actorId: actorId },
+            flags: { mc2d20roll: mc2d20Roll, itemId: itemId, actorId: actorId },
             type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             roll: roll,
         };
