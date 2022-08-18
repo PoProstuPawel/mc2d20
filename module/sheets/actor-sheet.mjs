@@ -305,7 +305,7 @@ export class MCActorSheet extends ActorSheet {
             const itemId = li.data("itemId");
             const item = this.actor.items.get(li.data("itemId"));
             const cost = parseInt(item.data.data.cost);
-            game.mc2d20.DialogD6.createDialog({ rollName: `${item.data.name} - Cost`, diceNum: cost, ac2d20Roll: null, itemId: itemId, actorId: this.actor.data._id })
+            game.mc2d20.DialogD6.createDialog({ rollName: `${item.data.name} - Cost`, diceNum: cost, mc2d20Roll: null, itemId: itemId, actorId: this.actor.data._id })
         })
 
         html.find('.item-value-changer').change(async (event) => {
