@@ -40,7 +40,7 @@
 						"value": 6,
 						"bonus":0
 					},
-					"bra": {
+					"awa": {
 						"value": 6,
 						"bonus":0
 					},
@@ -48,15 +48,23 @@
 						"value": 6,
 						"bonus":0
 					},
-					"ins": {
+					"int": {
 						"value": 6,
 						"bonus":0
 					},
-					"rea": {
+					"men": {
 						"value": 6,
 						"bonus":0
 					},
-					"wil": {
+					"per": {
+						"value": 6,
+						"bonus":0
+					},
+					"phy": {
+						"value": 6,
+						"bonus":0
+					},
+					"str": {
 						"value": 6,
 						"bonus":0
 					}
