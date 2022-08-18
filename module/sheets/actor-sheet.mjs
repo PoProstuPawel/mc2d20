@@ -61,7 +61,7 @@ export class MCActorSheet extends ActorSheet {
 
         // Prepare active effects
         context.effects = prepareActiveEffectCategories(this.actor.effects);
-        context.AC2D20 = CONFIG.AC2D20;
+        context.MC2D20 = CONFIG.MC2D20;
 
         return context;
     }
@@ -218,8 +218,8 @@ export class MCActorSheet extends ActorSheet {
             if (this.actor.data.type == 'npc' || this.actor.data.type == 'vehicle')
                 complication -= this.actor.data.data.injuries.value;
 
-            const attrName = game.i18n.localize('AC2D20.Ability.' + attr);
-            game.ac2d20.Dialog2d20.createDialog({ rollName: `Roll ${attrName}`, diceNum: 2, attribute: attribute.value, skill: 0, focus: false, complication: complication })
+            const attrName = game.i18n.localize('MC2D20.Ability.' + attr);
+            game.mc2d20.Dialog2d20.createDialog({ rollName: `Roll ${attrName}`, diceNum: 2, attribute: attribute.value, skill: 0, focus: false, complication: complication })
         })
 
         // * SKILLS LISTENERS [clic, right-click, value change, focus ]
@@ -295,7 +295,7 @@ export class MCActorSheet extends ActorSheet {
             //const attrValue = this.actor.data.data.attributes[item.data.data.spellType].value;
             const attrValue = -1;
             const prefAttribute = item.data.data.spellType;
-            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
+            game.mc2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
 
         });
 
@@ -363,7 +363,7 @@ export class MCActorSheet extends ActorSheet {
             const attrValue = item.actor.type == 'vehicle' ? 6 : -1;
             // weaponType is actualy attribute abrevation
             const prefAttribute = item.data.data.weaponType;
-            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
+            game.mc2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
 
         });
 
@@ -380,7 +380,7 @@ export class MCActorSheet extends ActorSheet {
             else if (item.data.data.weaponType == 'wil')
                 stressBonus = item.actor.data.data.attributes['wil'].bonus;
             let stress = parseInt(item.data.data.stress) + parseInt(stressBonus);
-            game.ac2d20.DialogD6.createDialog({ rollName: item.data.name, diceNum: stress, ac2d20Roll: null, itemId: itemId, actorId: this.actor.data._id })
+            game.mc2d20.DialogD6.createDialog({ rollName: item.data.name, diceNum: stress, mc2d20Roll: null, itemId: itemId, actorId: this.actor.data._id })
         })
 
         // * AMMO COUNT UPDATE 
@@ -413,7 +413,7 @@ export class MCActorSheet extends ActorSheet {
         html.find('.roll-impact.clickable').click((event) => {
             event.preventDefault();
             const impact = this.actor.data.data.impact;
-            game.ac2d20.DialogD6.createDialog({ rollName: `${this.actor.data.name} Impact`, diceNum: impact, ac2d20Roll: null })
+            game.mc2d20.DialogD6.createDialog({ rollName: `${this.actor.data.name} Impact`, diceNum: impact, mc2d20Roll: null })
         })
 
         // * CLICK TO EXPAND
