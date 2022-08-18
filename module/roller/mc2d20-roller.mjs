@@ -208,7 +208,7 @@ export class Roller2D20 {
         let oldDiceRolled = mc2d20Roll.dicesRolled;
         await Roller2D20.parseD6Roll({
             rollname: newRollName,
-            roll: _roll
+            roll: _roll,
             dicesRolled: dicesRolled,
             addDice: oldDiceRolled,
             itemId: itemId,
